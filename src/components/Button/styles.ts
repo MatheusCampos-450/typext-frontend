@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface StyledButtonProps {
-  color: string;
+  color?: string;
   colorText?: string;
   size?: string;
 }
@@ -14,16 +14,16 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: ${props => props.size || '17.313rem'};
   height: 4.063rem;
   border-radius: 1.25rem;
-  border: none;
-  outline: none;
+  border: 0.063rem;
+  outline: 0.063rem;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
 
   color: ${props => props.colorText || '#fff'};
-  background: ${props => props.color};
+  background: ${props => props.color || '#F60846'};
 
   img {
     height: 1.875rem;
